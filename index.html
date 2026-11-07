@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Mensageiro: atividade gamificada para ensino de computação</title>
+<meta name="description" content="Jogo web em que o estudante faz o papel do computador: lê, executa, prevê e conserta código. Anos finais do Ensino Fundamental, BNCC Computação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F7F9FC;--ink:#1F2A44;--ink2:#5B6780;--line:#E6EAF1;--blue:#1D3F86;--teal:#16A8A6;--yellow:#FFD45C;--coral:#FF7A59}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Ubuntu,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+  main{max-width:960px;margin:0 auto;padding:56px 24px 64px}
+  .eyebrow{font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#0B7473;margin:0}
+  h1{font-size:clamp(40px,7vw,68px);line-height:1.05;margin:10px 0 14px;letter-spacing:-1px}
+  .lead{font-size:20px;color:var(--ink2);max-width:640px;margin:0 0 36px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  a.card{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .15s,box-shadow .15s}
+  a.card:hover,a.card:focus-visible{transform:translateY(-3px);box-shadow:0 10px 24px rgba(31,42,68,.08);outline:none}
+  a.card:focus-visible{box-shadow:0 0 0 3px var(--teal)}
+  a.card.main{background:var(--blue);color:#fff;border-color:var(--blue)}
+  a.card.main p{color:#DCE6F7}
+  .card b{font-size:22px}
+  .card p{margin:0;color:var(--ink2);font-size:16px}
+  .card span.go{margin-top:auto;font-weight:700;color:var(--teal)}
+  a.card.main span.go{color:var(--yellow)}
+  .meta{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--ink2)}
+  .meta a{color:var(--blue)}
+  .houses{display:flex;gap:10px;margin:0 0 26px}
+  .houses svg{width:46px;height:46px}
+</style>
+</head>
+<body>
+<main>
+  <div class="houses" aria-hidden="true">
+    <svg viewBox="0 0 100 100"><circle cx="50" cy="58" r="44" fill="#FFD45C" opacity=".3"/><rect x="64" y="18" width="10" height="18" rx="2" fill="#E8664A"/><path d="M16 46 L50 18 L84 46 Z" fill="#FF7A59" stroke="#FF7A59" stroke-width="6" stroke-linejoin="round"/><rect x="24" y="44" width="52" height="42" rx="5" fill="#FFF4DE"/><rect x="32" y="53" width="17" height="15" rx="3" fill="#FFD45C"/><rect x="56" y="60" width="12" height="26" rx="3" fill="#FFB36B"/></svg>
+    <svg viewBox="0 0 100 100"><rect x="64" y="18" width="10" height="18" rx="2" fill="#B3BDCC"/><path d="M16 46 L50 18 L84 46 Z" fill="#C3CCD9" stroke="#C3CCD9" stroke-width="6" stroke-linejoin="round"/><rect x="24" y="44" width="52" height="42" rx="5" fill="#E3E8EF"/><rect x="32" y="53" width="17" height="15" rx="3" fill="#CDD5E0"/><rect x="56" y="60" width="12" height="26" rx="3" fill="#CDD5E0"/></svg>
+    <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="#fff" stroke="#16A8A6" stroke-width="14"/><circle cx="40" cy="45" r="5.5" fill="#1F2A44"/><circle cx="60" cy="45" r="5.5" fill="#1F2A44"/><path d="M41 59 q9 7 18 0" stroke="#1F2A44" stroke-width="4.5" fill="none" stroke-linecap="round"/><rect x="63" y="63" width="24" height="20" rx="5" fill="#FFD45C" stroke="#fff" stroke-width="4"/></svg>
+  </div>
+  <p class="eyebrow">Atividade gamificada para ensino de computação</p>
+  <h1>O Mensageiro</h1>
+  <p class="lead">Um jogo em que o estudante faz o papel do computador: lê o código, executa passo a passo, prevê o resultado e conserta erros para levar pão, remédio e cartas a quem precisa.</p>
+
+  <div class="cards">
+    <a class="card main" href="jogo/">
+      <b>Jogar a versão de teste</b>
+      <p>4 bairros, 19 missões nos modos Rastrear, Prever e Depurar. Funciona no computador e no celular.</p>
+      <span class="go">Abrir o jogo →</span>
+    </a>
+    <a class="card" href="apresentacao/">
+      <b>Apresentação</b>
+      <p>A proposta em 12 slides, com animações. Setas para navegar, F para tela cheia, N para as notas.</p>
+      <span class="go">Abrir a apresentação →</span>
+    </a>
+    <a class="card" href="docs/GDD.html">
+      <b>Game Design Document</b>
+      <p>Narrativa, mecânicas, mapa de progressão, gamificação, interface, dados e avaliação.</p>
+      <span class="go">Ler o GDD →</span>
+    </a>
+    <a class="card" href="docs/esboco-5W2H.html">
+      <b>Esboço da atividade (5W2H)</b>
+      <p>Planejamento pelo Framework 5W2H com a Taxonomia de Toda et al. e alinhamento à BNCC Computação.</p>
+      <span class="go">Ler o esboço →</span>
+    </a>
+    <a class="card" href="docs/relatorio-novidade.html">
+      <b>Relatório de novidade</b>
+      <p>O que já existe em ensino de lógica de programação e o que o Mensageiro traz de novo.</p>
+      <span class="go">Ler o relatório →</span>
+    </a>
+  </div>
+
+  <p class="meta">Autor: Cléo Quintiliano Fernandes de Brito · Mestrado Profissional em Ensino de Computação (ProfComp/UENP), disciplina de Gamificação, 2026.<br>
+  Código sob licença MIT; textos e apresentação sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a>.</p>
+</main>
+</body>
+</html>
